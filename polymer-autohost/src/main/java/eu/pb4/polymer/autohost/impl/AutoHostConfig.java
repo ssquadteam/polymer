@@ -18,6 +18,9 @@ public class AutoHostConfig {
     public String _c2 = "Marks resource pack as required";
     @SerializedName("required")
     public boolean require = false;
+    public String _c3x = "Enables hosting but disables sending the pack to players automatically";
+    @SerializedName("host_only")
+    public boolean hostOnly = false;
     public String _c3 = "Type of resource pack provider. Default: 'polymer:automatic'";
     public String type = "polymer:automatic";
     public String _c4 = "Configuration of type, see provider's source for more details";

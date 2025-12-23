@@ -39,7 +39,7 @@ public abstract class ServerConfigurationNetworkHandlerMixin extends ServerCommo
 
     @Inject(method = "queueSendResourcePackTask", at = @At("TAIL"))
     private void polymerAutoHost$addTask(CallbackInfo ci) {
-        if (AutoHost.config.enabled && !this.server.isHost(this.getProfile())) {
+        if (AutoHost.config.enabled && !AutoHost.config.hostOnly && !this.server.isHost(this.getProfile())) {
             var x = new ArrayList<MinecraftServer.ServerResourcePackProperties>();
             var ready = AutoHost.provider.isReady();
             if (ready) {
