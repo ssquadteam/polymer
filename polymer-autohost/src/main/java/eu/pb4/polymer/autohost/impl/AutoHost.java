@@ -41,6 +41,8 @@ public class AutoHost implements ModInitializer {
         if (!config.enabled) {
             return;
         }
+        
+        System.out.println("[Polymer AutoHost Debug] Config loaded - enabled: " + config.enabled + ", hostOnly: " + config.hostOnly + ", require: " + config.require);
 
         try {
             AutoHost.message = Text.Serialization.fromJsonTree(AutoHost.config.message, server.getRegistryManager());

@@ -42,7 +42,7 @@ public abstract class ServerConfigurationNetworkHandlerMixin extends ServerCommo
         if (AutoHost.config.enabled && !AutoHost.config.hostOnly && !this.server.isHost(this.getProfile())) {
             var x = new ArrayList<MinecraftServer.ServerResourcePackProperties>();
             var ready = AutoHost.provider.isReady();
-            if (ready) {
+            if (ready) { 
                 x.addAll(AutoHost.provider.getProperties(this.connection));
             }
             x.addAll(AutoHost.GLOBAL_RESOURCE_PACKS);
